@@ -99,13 +99,27 @@
             text-align: center;
             padding-top: 5rem;
         }
-        .hero-content h1 {
+        /* .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
             background: linear-gradient(90deg, #00b894, #00cec9 80%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
+        } */
+            .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, #00b894, #00cec9 80%);
+
+        /* ✅ Add both standard and vendor-prefixed properties */
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        /* ✅ Make text transparent so background shows through */
+        color: transparent; /* standard */
+        -webkit-text-fill-color: transparent; /* for WebKit browsers */
+}
+
         .hero-subtitle {
             font-size: 1.3rem;
             font-family: 'Poppins', sans-serif;
@@ -146,14 +160,29 @@
             flex: 2;
             min-width: 270px;
         }
-        .about-text h2 {
+        /* .about-text h2 {
             font-size: 2.4rem;
             font-family: 'Poppins', sans-serif;
             margin-bottom: 1.5rem;
             background: linear-gradient(90deg,#00b894,#00cec9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        } */
+         .about-text h2 {
+        font-size: 2.4rem;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(90deg, #00b894, #00cec9);
+
+        /* ✅ Standard + WebKit-prefixed for compatibility */
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        /* ✅ Text transparency to show gradient */
+        color: transparent; /* Standard fallback */
+        -webkit-text-fill-color: transparent; /* WebKit only */
         }
+
         .about-text p {
             font-size: 1.05rem;
             color: var(--text-dark);
